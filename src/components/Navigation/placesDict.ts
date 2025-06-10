@@ -1,5 +1,3 @@
-import type { DefineComponent } from "vue"
-
 import KyotoIcon from "../../Icons/KyotoIcon.vue"
 import HiroshimaIcon from "../../Icons/HiroshimaIcon.vue"
 import TokyoTower from "../../Icons/TokyoTower.vue"
@@ -8,21 +6,7 @@ import FujiIcon from "../../Icons/FujiIcon.vue"
 import SapporoIcon from "../../Icons/SapporoIcon.vue"
 import KagaIcon from "../../Icons/KagaIcon.vue"
 
-type PlacesDict = {
-  [key: string]: Place
-}
-
-type Place = {
-  placeName: string,
-  icon: DefineComponent<any, any, any>, 
-  position: {
-    destination: number[],
-    orientation: {
-      direction: number[],
-      up: number[],
-    },
-  }
-}
+import type { PlacesDict } from "../../types/place"
 
 export const placesDict: PlacesDict = {
   hiroshima: {
