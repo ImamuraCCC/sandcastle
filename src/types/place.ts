@@ -1,4 +1,5 @@
 import type { DefineComponent } from "vue"
+import type { Position } from "./position"
 
 type PlacesDict = {
   [key: string]: Place
@@ -7,13 +8,7 @@ type PlacesDict = {
 type Place = {
   placeName: string,
   icon: DefineComponent<any, any, any>, 
-  position: {
-    destination: number[],
-    orientation: {
-      direction: number[],
-      up: number[],
-    },
-  }
+  position: Position,
 }
 
 export type { PlacesDict, Place }
