@@ -1,12 +1,12 @@
 import type { DefineComponent } from "vue"
 
-import KyotoIcon from "../Icons/KyotoIcon.vue"
-import HiroshimaIcon from "../Icons/HiroshimaIcon.vue"
-import TokyoTower from "../Icons/TokyoTower.vue"
-import HakoneIcon from "../Icons/HakoneIcon.vue"
-import FujiIcon from "../Icons/FujiIcon.vue"
-import SapporoIcon from "../Icons/SapporoIcon.vue"
-import KagaIcon from "../Icons/KagaIcon.vue"
+import KyotoIcon from "../../Icons/KyotoIcon.vue"
+import HiroshimaIcon from "../../Icons/HiroshimaIcon.vue"
+import TokyoTower from "../../Icons/TokyoTower.vue"
+import HakoneIcon from "../../Icons/HakoneIcon.vue"
+import FujiIcon from "../../Icons/FujiIcon.vue"
+import SapporoIcon from "../../Icons/SapporoIcon.vue"
+import KagaIcon from "../../Icons/KagaIcon.vue"
 
 type PlacesDict = {
   [key: string]: Place
