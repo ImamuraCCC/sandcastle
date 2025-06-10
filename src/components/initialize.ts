@@ -1,4 +1,4 @@
-import { Viewer, Cartesian3, HeadingPitchRoll, Matrix4 } from "cesium"
+import { Viewer, Cartesian3, HeadingPitchRoll, Matrix4, DirectionalLight } from "cesium"
 import { setViewer } from "../store/viewer"
 import { load3DTiles } from "../cesium/load3DTIles"
 import { loadTerrain } from "../cesium/loadTerrain"
@@ -17,11 +17,16 @@ export const initialize = async () => {
   })
   setViewer(viewer)
 
-  viewer.scene.globe.depthTestAgainstTerrain = true
-
+  setDepthTestAgainstTerrain(viewer)
   setInitView(viewer)
+  setCameraLight(viewer)
+
   await loadTerrain(viewer, 2767062)
   await load3DTiles(viewer, 2602291)
+}
+
+const setDepthTestAgainstTerrain = (viewer: Viewer) => {
+  viewer.scene.globe.depthTestAgainstTerrain = true
 }
 
 const setInitView = (viewer: Viewer) => {
@@ -41,5 +46,23 @@ const setInitView = (viewer: Viewer) => {
     destination: initialPosition,
     orientation: initialOrientation,
     endTransform: Matrix4.IDENTITY,
+  })
+}
+
+const setCameraLight = (viewer: Viewer) => {
+  const cameraLight = new DirectionalLight({
+    direction: viewer.scene.camera.directionWC,
+    intensity: 2.0,
+  })
+  viewer.scene.globe.enableLighting = true
+  viewer.scene.globe.dynamicAtmosphereLightingFromSun = false
+  viewer.scene.globe.dynamicAtmosphereLighting = false
+  viewer.scene.light = cameraLight
+
+  viewer.scene.preRender.addEventListener((scene) => {
+    scene.light.direction = Cartesian3.clone(
+      scene.camera.directionWC,
+      scene.light.direction,
+    )
   })
 }
