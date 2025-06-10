@@ -1,6 +1,6 @@
 import { Viewer, Cartesian3, HeadingPitchRoll, Matrix4, DirectionalLight } from "cesium"
 import { setViewer } from "../store/viewer"
-import { load3DTiles } from "../cesium/load3DTIles"
+import { load3DTiles } from "../cesium/load3DTiles"
 import { loadTerrain } from "../cesium/loadTerrain"
 
 export const initialize = async () => {
