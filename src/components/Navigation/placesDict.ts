@@ -1,10 +1,10 @@
-import KyotoIcon from "../../Icons/KyotoIcon.vue"
-import HiroshimaIcon from "../../Icons/HiroshimaIcon.vue"
-import TokyoTower from "../../Icons/TokyoTower.vue"
-import HakoneIcon from "../../Icons/HakoneIcon.vue"
-import FujiIcon from "../../Icons/FujiIcon.vue"
-import SapporoIcon from "../../Icons/SapporoIcon.vue"
-import KagaIcon from "../../Icons/KagaIcon.vue"
+import KyotoIcon from "./Icons/KyotoIcon.vue"
+import HiroshimaIcon from "./Icons/HiroshimaIcon.vue"
+import TokyoTower from "./Icons/TokyoTower.vue"
+import HakoneIcon from "./Icons/HakoneIcon.vue"
+import FujiIcon from "./Icons/FujiIcon.vue"
+import SapporoIcon from "./Icons/SapporoIcon.vue"
+import KagaIcon from "./Icons/KagaIcon.vue"
 
 import type { PlacesDict } from "../../types/place"
 
@@ -17,8 +17,7 @@ export const placesDict: PlacesDict = {
       ],
       orientation: {
         direction: [0.915045649098936, -0.16130516440787898, 0.3696919041586574],
-        up: [
-          -0.20924973638933655, 0.5937271886242537, 0.7769829942214522],
+        up: [-0.20924973638933655, 0.5937271886242537, 0.7769829942214522],
       },
     }
   },
@@ -26,13 +25,10 @@ export const placesDict: PlacesDict = {
     placeName: "東京タワー",
     icon: TokyoTower,
     position: {
-      destination: [
-        -3959788.9678092706, 3353283.9088315447, 3697270.0292328526],
+      destination: [-3959788.9678092706, 3353283.9088315447, 3697270.0292328526],
       orientation: {
-        direction: [
-          0.1473261076519599, -0.9210400676146971, 0.3605276852787276],
-        up: [
-          -0.6082716434343354, 0.20305763470537083, 0.7673155835649066],
+        direction: [0.1473261076519599, -0.9210400676146971, 0.3605276852787276],
+        up: [-0.6082716434343354, 0.20305763470537083, 0.7673155835649066],
       },
     }
   },

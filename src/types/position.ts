@@ -1,8 +1,8 @@
 type Position = {
-  destination: number[],
+  destination: [number, number, number],
   orientation: {
-    direction: number[],
-    up: number[],
+    direction: [number, number, number],
+    up: [number, number, number],
   }
 }
 

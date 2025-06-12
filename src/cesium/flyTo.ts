@@ -2,7 +2,7 @@ import { Viewer } from 'cesium'
 import { Cartesian3 } from 'cesium'
 import type { Position } from '../types/position'
 
-const flyTo = (viewer: Viewer, position: Position): void => {
+const flyTo = (viewer: Viewer, position: Position) => {
   if (!viewer || !position) {
     console.log("パラメータが正しくありません。")
     return

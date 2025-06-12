@@ -1,10 +1,10 @@
 import { Viewer, CesiumTerrainProvider } from "cesium"
 
-const loadTerrain = async (viewer: Viewer, urlOrAsssetNumber: string | number): Promise<void> => {
+const loadTerrain = async (viewer: Viewer, urlOrAssetNumber: string | number): Promise<void> => {
   try {
-    const terrain = typeof urlOrAsssetNumber === "string" ?
-      await CesiumTerrainProvider.fromUrl(urlOrAsssetNumber) :
-      await CesiumTerrainProvider.fromIonAssetId(urlOrAsssetNumber)
+    const terrain = typeof urlOrAssetNumber === "string" ?
+      await CesiumTerrainProvider.fromUrl(urlOrAssetNumber) :
+      await CesiumTerrainProvider.fromIonAssetId(urlOrAssetNumber)
 
     viewer.terrainProvider = terrain
   } catch (error) {
